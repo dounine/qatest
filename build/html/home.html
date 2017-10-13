@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
     <link href="../css/application.css" rel="stylesheet" type="text/css">
     <link href="../css/home.css" rel="stylesheet" type="text/css">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
@@ -28,8 +29,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a target="_blank" href="https://manualtest.io/documentation/getting_started">Help</a></li>
-            <li id="header-nav-signin"><a href="#" data-toggle="modal" data-target="#signin-modal"><strong>Sign in</strong></a></li>
+            <li><a target="_blank" href="https://manualtest.io/documentation/getting_started">帮助</a></li>
+            <li><a class="js-feedback" href="javascript:void(0)">反馈</a></li>
+            <li id="header-nav-signin"><a href="#" data-toggle="modal" data-target="#signin-modal"><strong>登录</strong></a></li>
             <li class="dropdown" id="header-nav-user">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <strong><span id="header-username"></span></strong> <b class="caret"></b>
@@ -266,9 +268,9 @@
       </div>
     </div>
 
-    <footer>
-      <div id="footer-feedback-btn" class="js-feedback">feedback</div>
-    </footer>
+<!--     <footer> -->
+<!--       <div id="footer-feedback-btn" class="js-feedback">反馈</div> -->
+<!--     </footer> -->
 
 
     <div class="modal fade" id="new-scenario-modal" tabindex="-1" role="dialog" aria-labelledby="new-scenario-modal-title" aria-hidden="true">
@@ -440,23 +442,23 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="feedback-modal-label">Feedback</h4>
+            <h4 class="modal-title" id="feedback-modal-label">反馈</h4>
           </div>
           <div class="modal-cover" id="modal-cover-feedback">
-            Thank you.<br>We will get back to you shortly.
+            谢谢.<br>我们会尽快回复.
           </div>
           <form role="form" id="feedback-form">
             <div class="modal-body">
               <div class="form-group">
-                <label class="control-label" for="feedback-name">Name</label>
+                <label class="control-label" for="feedback-name">名字</label>
                 <input class="form-control" id="feedback-name" placeholder="">
               </div>
               <div class="form-group">
-                <label class="control-label" for="feedback-email">Email</label>
+                <label class="control-label" for="feedback-email">邮件</label>
                 <input type="email" class="form-control" id="feedback-email" placeholder="">
               </div>
               <div class="form-group">
-                <label class="control-label" for="feedback-message">Message</label>
+                <label class="control-label" for="feedback-message">信息</label>
                 <textarea id="feedback-message" class="form-control" rows="5"></textarea>
               </div>
             </div>
