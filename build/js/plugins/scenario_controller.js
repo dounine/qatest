@@ -192,7 +192,7 @@ Return a promise that will be rejected once the page reach error state
 
             currentActionCallback(index);
 
-            if (actions[index].isComposable) {
+            if (actions[index].isComposable) {//可组合
                 if (index !== 0 && shouldSkip(actions[index], actions[index - 1])) {
                     resultsWithSkippedActions[actionsCount] = ActionResult.create(true);
                 } else {
@@ -656,9 +656,9 @@ cb(err) - callback when reset is completed
         initializeWebView();
 
         Promise.race([getError(), webview.ready()]).then(function () {
-            console.log("------------------ Webview is ready. Begin running steps. ------------------");
+            console.log("------------------ Webview 已经加载完成. 开始运行步骤. ------------------");
             scenarioController.rerun(function (err) {
-                console.log("------------------ Run steps completed. ------------------");
+                console.log("------------------ 运行步骤完成. ------------------");
                 webviewCover.unmask().unblock();
                 hidePageLoading();
                 scenarioReady = true;

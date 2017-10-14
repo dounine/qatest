@@ -29,6 +29,7 @@ requirejs(["jquery", "bootstrap", "scenario/scenario_controller", "windows"], fu
         var run = function () {
             setStatusLabel(TEST_STATUS.Running);
 
+            //执行结果
             scenarioController.reset(function (err) {
                 if (!err) {
                     setStatusLabel(TEST_STATUS.Pass);
