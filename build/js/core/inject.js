@@ -16,7 +16,7 @@
 
 */
 
-var logging = false;
+var logging = true;
 
 var MESSAGE_TYPE_FROM_INJECT = "fromInject";
 var MESSAGE_TYPE_TO_INJECT = "toInject";
@@ -38,7 +38,7 @@ var appOrigin = null; // Used to identify message from app
 var log = function () {
     if (logging) {
         var args = Array.prototype.slice.call(arguments);
-        args[0] = "inject.js: " + args[0];
+        args[0] = ("inject.js: " + args[0]);
         console.log.apply(console, args);
     }
 };

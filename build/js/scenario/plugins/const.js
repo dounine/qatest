@@ -1,3 +1,10 @@
+const TEST_STATUS = {
+    Running: "Running",
+    Pass: "Pass",
+    Fail: "Fail",
+    Initializing: "Initializing"
+};
+
 const Displayable = {
     displayAction: function (action) {
         return "<span class='step-display-action'>" + action + "</span>";

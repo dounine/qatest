@@ -6381,6 +6381,8 @@ button.close {
     font-weight: 400; }
   #status-label-container .result-label {
     font-weight: bold;
+    height: 26px;
+    line-height: 22px;
     font-size: 18px;
     display: none;
     width: 100px; }
